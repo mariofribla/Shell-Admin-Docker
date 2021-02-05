@@ -1,11 +1,23 @@
 #!/bin/sh
 
-#docker ps
-#echo "OK..."
+
+CONSOLE=0
+while getopts "c" opt
+do
+  case "$opt" in
+     c ) CONSOLE=1
+         shift;;
+  esac
+done
 
 LST=`docker ps | awk '{print $0"\n"}'`
 
-zenity --info --width=850 --height=320 --text "$LST"
+if [ $CONSOLE -eq 1 ]
+then
+  echo -e "$LST"
+else
+  zenity --info --width=850 --height=320 --text "$LST"
+fi
 
 exit 0
 

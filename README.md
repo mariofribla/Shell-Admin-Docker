@@ -30,6 +30,12 @@ zenity --calendar
 * dc_bash.sh:
 	Permite Graficamente ingresar modo comando en un Contenedor Docker.
 
+* dc_CleanContaine.sh
+	Permite Eliminar Containers Corruptas, Sin Uso, Deprecados, etc.
+
+* dc_CleanImages.sh
+	Permite Eliminar Images Dcoker Corruptas, Sin Uso, Deprecados, etc.
+
 * dc_ls.sh:
 	Lista los Contenedores disponibles.
 
@@ -46,6 +52,7 @@ zenity --calendar
 	Detiene, Remueve, etc. de un Docker Compose.
 
 * dc_ps.sh
+        Parametro: -c : Permite mostra por Consola el resultado.
 	Lista Graficamente los Contenedores en ejecución.
 
 * dc_StartContainer.sh
